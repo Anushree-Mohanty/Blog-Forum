@@ -121,7 +121,7 @@ function Navbar({ user, handleLogout }) {
           ) : (
             <Link
               to="/signin"
-              className=" w-[200px] text-center bg-purple-600 text-black px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
+              className=" w-[200px] text-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
               onClick={() => setIsMenuOpen(false)} // Close menu on click
             >
               Sign In
