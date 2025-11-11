@@ -71,7 +71,7 @@ function CreatePost() {
             rows="10"
             value={content}
             onChange={(e) => setContent(e.target.value)}
-            className="mt-1 block w-full rounded-md border border-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border border-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm break-words overflow-hidden"
           />
           {errors?.content && (
             <p className="text-red-500 text-xs mt-1">{errors.content._errors[0]}</p>
