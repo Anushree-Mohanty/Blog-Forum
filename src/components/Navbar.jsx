@@ -96,7 +96,7 @@ function Navbar({ user, handleLogout }) {
         <div className="absolute top-full left-0 w-full bg-[#E6E6FA] shadow-md md:hidden flex flex-col items-center space-y-4 py-4">
           <Link
             to="/"
-            className="text-purple-700 hover:text-purple-900 font-medium"
+            className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
             onClick={() => setIsMenuOpen(false)} // Close menu on click
           >
             Home

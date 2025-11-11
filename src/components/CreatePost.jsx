@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
-import { z } from 'zod'; // Import Zod
+import { z } from 'zod'; 
 
-// Define the schema for post validation
+
 const postSchema = z.object({
   title: z.string().min(3, { message: 'Title must be at least 3 characters long' }),
   content: z.string().min(10, { message: 'Content must be at least 10 characters long' }),
@@ -16,27 +16,27 @@ function CreatePost() {
   const [content, setContent] = useState('');
   const [errors, setErrors] = useState(null);
 
-  // Protected Route: Check if user is logged in
+  
   useEffect(() => {
     if (!user) {
-      navigate('/signin'); // Redirect to sign-in if not logged in
+      navigate('/signin'); 
     }
   }, [user, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors(null); // Clear previous errors
+    setErrors(null); 
 
-    // Validate with Zod
+    
     const result = postSchema.safeParse({ title, content });
 
     if (!result.success) {
-      // Zod errors are complex, .format() makes them easier to display
+      
       setErrors(result.error.format());
     } else {
-      // Validation passed
+      
       addPost({ title, content });
-      navigate('/'); // Go back to home page
+      navigate('/'); 
     }
   };
 
