@@ -32,7 +32,7 @@ function Home() {
               <p className="text-gray-500 text-sm mb-3">
                 Posted on {post.date}
               </p>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 break-words">
                 {post.content.substring(0, 150)}...
               </p>
               <div className="flex justify-between items-center">
