@@ -1,5 +1,5 @@
 import { Link, useOutletContext } from "react-router-dom";
-import bgImage from "../assets/img1.jpg"; // ✅ import your image
+import bgImage from "../assets/img1.jpg"; 
 
 function Home() {
   const { posts, deletePost, user } = useOutletContext();

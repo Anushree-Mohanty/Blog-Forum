@@ -1,77 +1,29 @@
-// import { Link } from "react-router-dom";
-
-// function Navbar({ user, handleLogout }) {
-//   return (
-//     <nav className="bg-[#e9ccf8] shadow-md py-4 px-8 flex justify-between items-center">
-//       <Link to="/" className="text-2xl font-bold text-purple-800">
-//         💜 Blog Forum
-//       </Link>
-
-//       <div className="space-x-6">
-//         <Link to="/" className="text-purple-700 hover:text-purple-900 font-medium">
-//           Home
-//         </Link>
-
-//         {user ? (
-//           <>
-//             <Link
-//               to="/create"
-//               className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
-//             >
-//               Create Post
-//             </Link>
-//             <button
-//               onClick={handleLogout}
-//               className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-all"
-//             >
-//               Logout
-//             </button>
-//           </>
-//         ) : (
-//           <Link
-//             to="/signin"
-//             className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
-//           >
-//             Sign In
-//           </Link>
-//         )}
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
-
-
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react"; // 1. Import useState
+import { useState } from "react"; 
 
 function Navbar({ user, handleLogout }) {
-  // 2. Add state to track if the mobile menu is open
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Helper function to handle logout and close menu
+
   const onLogout = () => {
     handleLogout();
-    setIsMenuOpen(false); // Close menu on logout
+    setIsMenuOpen(false); 
     navigate('/'); 
   };
 
   return (
-    // 3. Add 'relative' for positioning the mobile menu
     <nav className="bg-[#E6E6FA] shadow-md py-4 px-4 flex justify-between items-center relative z-10">
       <Link 
         to="/" 
         className="text-2xl font-bold text-purple-800"
-        onClick={() => setIsMenuOpen(false)} // Close menu on logo click
+        onClick={() => setIsMenuOpen(false)} 
       >
         💜 Blog Forum
       </Link>
 
-      {/* 4. Desktop Menu (Hidden on mobile) */}
       <div className="hidden md:flex items-center space-x-6">
-        <Link to="/" className="text-purple-700 hover:text-purple-900 font-medium">
+        <Link to="/" className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all">
           Home
         </Link>
 
