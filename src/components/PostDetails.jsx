@@ -17,8 +17,8 @@ function PostDetails() {
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       <p className="text-gray-500 text-sm mb-6">Posted on {post.date}</p>
       
-      <p className="text-gray-800 text-lg leading-relaxed whitespace-pre-wrap">
-        {post.content}
+      <p className="text-gray-800 text-lg leading-relaxed whitespace-pre-wrap break-words overflow-hidden">
+        {post.content.replace(/</g, '‹').replace(/>/g, '›')}
       </p>
       <Link
         to="/"
