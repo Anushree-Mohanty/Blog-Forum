@@ -67,8 +67,8 @@ function Home() {
           </h1>
           <p className="text-xl text-gray-200 drop-shadow-lg">
             Please{" "}
-            <Link to="/signin" className="font-bold underline hover:text-white">
-              Sign In
+            <Link to="/signup" className="font-bold underline hover:text-white">
+              Sign Up
             </Link>{" "}
             to see the posts.
           </p>
