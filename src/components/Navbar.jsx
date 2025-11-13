@@ -230,14 +230,14 @@ function Navbar({ user, handleLogout }) {
             {!hasAccount ? (
               <Link
                 to="/signup"
-                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all"
+                className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
               >
                 Sign Up
               </Link>
             ) : (
               <Link
                 to="/signin"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all"
+                className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
               >
                 Login
               </Link>
@@ -320,7 +320,7 @@ function Navbar({ user, handleLogout }) {
               {!hasAccount ? (
                 <Link
                   to="/signup"
-                  className="w-[200px] text-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all"
+                  className="w-[200px] text-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Sign Up
@@ -328,7 +328,7 @@ function Navbar({ user, handleLogout }) {
               ) : (
                 <Link
                   to="/signin"
-                  className="w-[200px] text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all"
+                  className="w-[200px] text-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Login
